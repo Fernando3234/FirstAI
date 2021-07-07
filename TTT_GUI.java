@@ -1,21 +1,25 @@
+// Your First Program
+import java.awt.*;
 import javax.swing.*;
 
-class TTT_GUI{
-    public static void main(String args[]){
-       JFrame frame = new JFrame("Tic Tac Toe");
-       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-       frame.setSize(300,300);
-       frame.setLayout(null);
-       frame.setVisible(true);
-     }
-}
-    public static void button(x,y,w,l){
+class TTT_GUI {
+  public static void CreateButtons(){
+    JFrame f;
+    f = new JFrame();
 
-      for (int x = 130, x = 330, x += 100 ){
-        for (int y = 100, y = 180, y += 40){
-          JButton b = new JButton("x");
-          b.setBounds(x,y,100,40);
-          frame.add(b);
-        }
+    for(int x = 0; x <= 600; x+=300){
+      for(int y = 0; y <= 600; y+=300){
+        JButton button = new JButton("click");
+        button.setBounds(x,y,300,300);
+        f.add(button);
+      }
+    }
+    f.setSize(900,900);
+    f.setLayout(null);
+    f.setVisible(true);
+  }
+
+  public static void main(String[] args) {
+    CreateButtons();
     }
 }
